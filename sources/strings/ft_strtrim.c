@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 14:41:50 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:10:17 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:37:54 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 static int	ft_char_in_str(const char str, const char *set)
 {

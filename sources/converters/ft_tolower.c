@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/14 20:53:26 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:04:55 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:31:54 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

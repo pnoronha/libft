@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 00:47:50 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:09:28 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:37:03 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 static int	ft_wordlen(const char *s, char c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 18:52:59 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:09:38 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:37:11 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {

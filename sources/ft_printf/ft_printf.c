@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 02:38:11 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:05:57 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:33:57 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *string, ...)
 {

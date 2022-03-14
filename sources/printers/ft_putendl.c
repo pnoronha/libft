@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 17:14:59 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:08:44 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:35:52 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 void	ft_putendl(char *s)
 {

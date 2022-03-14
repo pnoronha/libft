@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   string_iteration.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 14:48:15 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:06:01 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:34:01 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	pass_through_string(t_tab *tab)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 14:16:19 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:04:48 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:31:36 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 long	ft_atol(const char *nptr)
 {

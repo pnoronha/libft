@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/17 15:58:02 by pnoronha          #+#    #+#              #
-#    Updated: 2022/03/06 15:54:22 by pnoronha         ###   ########.fr        #
+#    Updated: 2022/03/14 20:39:46 by pnoronha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,12 +80,12 @@ OBJS_DIR	:=	objects
 OBJS		:=	$(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
 
 CC			:=	gcc
-CFLAGS		:=	-Wall -Wextra -Werror -I./indcludes
+CFLAGS		:=	-Wall -Wextra -Werror -Iincludes
 RM	 		:=	rm -df
 
-all:	objs_folder	$(NAME)
+all:	$(NAME)
 
-$(NAME):	$(OBJS) | $(OBJS_DIR)
+$(NAME):	$(OBJS) | $(OBJS_DIR) objs_folder
 		@ar rcs $(NAME) $(OBJS)
 		@echo "\033[32;1m>>	Library libft indexed\033[0m"
 
@@ -140,4 +140,4 @@ fclean:	clean
 
 re:		fclean all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re objs_folder

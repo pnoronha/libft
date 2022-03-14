@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   conversion_treat_2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 02:48:13 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 03:05:36 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:33:23 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "ft_printf.h"
 
 void	conversion_pointer(t_tab *tab)
 {

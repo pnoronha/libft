@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 10:11:55 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/06 13:21:29 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/03/14 20:32:32 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 char	*ft_utoa(unsigned int n)
 {
