@@ -6,7 +6,7 @@
 #    By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/17 15:58:02 by pnoronha          #+#    #+#              #
-#    Updated: 2022/03/14 20:39:46 by pnoronha         ###   ########.fr        #
+#    Updated: 2022/04/20 15:44:46 by pnoronha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS		:=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
 				$(SRCS_DIR)/checkers/ft_isprint.c			\
 				$(SRCS_DIR)/checkers/ft_isspace.c			\
 				$(SRCS_DIR)/converters/ft_atoi.c			\
+				$(SRCS_DIR)/converters/ft_atod.c			\
 				$(SRCS_DIR)/converters/ft_atol.c			\
 				$(SRCS_DIR)/converters/ft_itoa.c			\
 				$(SRCS_DIR)/converters/ft_tolower.c			\
