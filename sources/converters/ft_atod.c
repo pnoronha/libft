@@ -6,7 +6,7 @@
 /*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 15:23:43 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/05/02 22:59:40 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/05/02 23:16:10 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static double	converter(const char *nptr)
 double	ft_atod(const char *nptr)
 {
 	int			sign;
-	double		value;
 
 	while (ft_isspace((int)*nptr))
 		nptr++;
