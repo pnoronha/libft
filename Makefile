@@ -6,7 +6,7 @@
 #    By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/17 15:58:02 by pnoronha          #+#    #+#              #
-#    Updated: 2022/04/20 15:44:46 by pnoronha         ###   ########.fr        #
+#    Updated: 2022/06/03 15:22:13 by pnoronha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRCS		:=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
 				$(SRCS_DIR)/memory/ft_memcpy.c				\
 				$(SRCS_DIR)/memory/ft_memmove.c				\
 				$(SRCS_DIR)/memory/ft_memset.c				\
+				$(SRCS_DIR)/memory/ft_free_dptr.c			\
 				$(SRCS_DIR)/printers/ft_putchar_fd.c		\
 				$(SRCS_DIR)/printers/ft_putchar.c			\
 				$(SRCS_DIR)/printers/ft_putendl_fd.c		\
