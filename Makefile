@@ -6,31 +6,30 @@
 #    By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/17 15:58:02 by pnoronha          #+#    #+#              #
-#    Updated: 2022/06/03 15:22:13 by pnoronha         ###   ########.fr        #
+#    Updated: 2022/06/15 03:27:43 by pnoronha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	libft.a
+NAME		=	libft.a
 
-SRCS_DIR	:=	sources
-
-SRCS		:=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
+SRCS_DIR	=	sources
+SRCS		=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
 				$(SRCS_DIR)/checkers/ft_isalpha.c			\
 				$(SRCS_DIR)/checkers/ft_isascii.c			\
 				$(SRCS_DIR)/checkers/ft_isdigit.c			\
 				$(SRCS_DIR)/checkers/ft_isprint.c			\
 				$(SRCS_DIR)/checkers/ft_isspace.c			\
 				$(SRCS_DIR)/converters/ft_atoi.c			\
-				$(SRCS_DIR)/converters/ft_atod.c			\
 				$(SRCS_DIR)/converters/ft_atol.c			\
+				$(SRCS_DIR)/converters/ft_atod.c			\
 				$(SRCS_DIR)/converters/ft_itoa.c			\
+				$(SRCS_DIR)/converters/ft_utoa.c			\
 				$(SRCS_DIR)/converters/ft_tolower.c			\
 				$(SRCS_DIR)/converters/ft_toupper.c			\
-				$(SRCS_DIR)/converters/ft_utoa.c			\
 				$(SRCS_DIR)/counters/ft_intlen.c			\
 				$(SRCS_DIR)/counters/ft_strlen.c			\
 				$(SRCS_DIR)/counters/ft_strnlen.c			\
-				$(SRCS_DIR)/counters/ft_unsignedlen.c		\
+				$(SRCS_DIR)/counters/ft_uintlen.c			\
 				$(SRCS_DIR)/counters/ft_wordcnt.c			\
 				$(SRCS_DIR)/ft_printf/conversion_treat.c	\
 				$(SRCS_DIR)/ft_printf/conversion_treat_2.c	\
@@ -78,68 +77,34 @@ SRCS		:=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
 				$(SRCS_DIR)/strings/ft_substr.c				\
 				$(SRCS_DIR)/gnl/get_next_line.c
 
-OBJS_DIR	:=	objects
-OBJS		:=	$(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
+OBJS_DIR	=	objects
+OBJS		:=	$(patsubst %.c, %.o, $(subst $(SRCS_DIR), $(OBJS_DIR), $(SRCS)))
 
-CC			:=	gcc
-CFLAGS		:=	-Wall -Wextra -Werror -Iincludes
-RM	 		:=	rm -df
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
+INCS		=	-Iincludes
+RM	 		=	rm -rf
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS) | $(OBJS_DIR) objs_folder
+$(NAME):	$(OBJS) | $(OBJS_DIR)
 		@ar rcs $(NAME) $(OBJS)
 		@echo "\033[32;1m>>	Library libft indexed\033[0m"
 
-$(OBJS_DIR)/checkers/%.o:	$(SRCS_DIR)/checkers/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/converters/%.o:	$(SRCS_DIR)/converters/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/counters/%.o:	$(SRCS_DIR)/counters/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/ft_printf/%.o:	$(SRCS_DIR)/ft_printf/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/linked_lists/%.o:	$(SRCS_DIR)/linked_lists/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/memory/%.o:	$(SRCS_DIR)/memory/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/printers/%.o:	$(SRCS_DIR)/printers/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/strings/%.o:	$(SRCS_DIR)/strings/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-$(OBJS_DIR)/gnl/%.o:	$(SRCS_DIR)/gnl/%.c
-		@mkdir -p $(dir $(@))
-		@$(CC)	-c	$(CFLAGS)	$(<)	-o	$(@)
-
-objs_folder:
-		@mkdir -p objects
+$(OBJS_DIR)/%.o:	$(SRCS_DIR)/%.c
+		mkdir -p $(dir $(@))
+		@$(CC) $(CFLAGS) $(INCS) -c $(<) -o $(@)
 
 clean:
 		@$(RM) $(OBJS)
 		@$(RM) -d ./objects/*
 		@$(RM) -d ./objects
-		@echo "\033[31;1m>>	Object files removed\033[0m"
+		@echo "\033[2;3;31m>>	Object files removed\033[0m"
 
 fclean:	clean
 		@$(RM) $(NAME)
-		@echo "\033[31;1m>>	Library removed\033[0m"
+		@echo "\033[2;3;31m>>	Library removed\033[0m"
 
 re:		fclean all
 
-.PHONY:	all clean fclean re objs_folder
+.PHONY:	all clean fclean re
