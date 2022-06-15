@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_uintlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/07 11:45:09 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/06/15 02:35:19 by pnoronha         ###   ########.fr       */
+/*   Created: 2021/08/07 11:50:56 by pnoronha          #+#    #+#             */
+/*   Updated: 2022/06/15 02:34:23 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int n)
+int	ft_uintlen(unsigned int n)
 {
 	int	len;
 
 	if (n >= 0 && n <= 9)
 		return (1);
 	len = 0;
-	if (n < 0)
-	{
-		n = -n;
-		len++;
-	}
 	while (n != 0)
 	{
 		n /= 10;
