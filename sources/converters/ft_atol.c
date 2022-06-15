@@ -6,7 +6,7 @@
 /*   By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 14:16:19 by pnoronha          #+#    #+#             */
-/*   Updated: 2022/03/14 20:31:36 by pnoronha         ###   ########.fr       */
+/*   Updated: 2022/06/15 01:57:35 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,20 @@
 
 long	ft_atol(const char *nptr)
 {
-	int		i;
 	int		sign;
 	long	value;
 
-	i = 0;
-	while (ft_isspace((int)nptr[i]))
-		i++;
+	while (ft_isspace((int)*nptr))
+		nptr++;
 	sign = 1;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
+	if (*nptr == '-' || *nptr == '+')
+		if (*nptr == '-' && nptr++)
 			sign = -1;
-		i++;
-	}
 	value = 0;
-	while (ft_isdigit((int)nptr[i]))
+	while (ft_isdigit((int)*nptr))
 	{
-		value = value * 10 + (nptr[i] - '0');
-		i++;
+		value = value * 10 + (*nptr - '0');
+		nptr++;
 	}
-	return ((long)value * sign);
+	return ((long)(value * sign));
 }
