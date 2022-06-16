@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pnoronha <pnoronha@student.42.fr>          +#+  +:+       +#+         #
+#    By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/17 15:58:02 by pnoronha          #+#    #+#              #
-#    Updated: 2022/06/15 03:27:43 by pnoronha         ###   ########.fr        #
+#    Updated: 2022/06/16 18:14:07 by pnoronha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,8 @@ SRCS		=	$(SRCS_DIR)/checkers/ft_isalnum.c			\
 				$(SRCS_DIR)/checkers/ft_isdigit.c			\
 				$(SRCS_DIR)/checkers/ft_isprint.c			\
 				$(SRCS_DIR)/checkers/ft_isspace.c			\
+				$(SRCS_DIR)/checkers/ft_isupper.c			\
+				$(SRCS_DIR)/checkers/ft_islower.c			\
 				$(SRCS_DIR)/converters/ft_atoi.c			\
 				$(SRCS_DIR)/converters/ft_atol.c			\
 				$(SRCS_DIR)/converters/ft_atod.c			\
